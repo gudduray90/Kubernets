@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cricket
+  namespace: demo
+spec:
+  selector:
+    matchLabels:
+      app: cricket
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cricket
+    spec:
+      containers:
+      - name: main
+        image: 548367176074.dkr.ecr.ap-south-1.amazonaws.com/bb/cricket
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 500m
+            memory: "1000Mi"
+          requests:
+            cpu: 200m
+            memory: "300Mi"
+            
+            
+            
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: demo
+  name: service-cricket
+  annotations:
+          alb.ingress.kubernetes.io/healthcheck-path: "/users"
+          alb.ingress.kubernetes.io/success-codes: '200-499'
+          alb.ingress.kubernetes.io/healthcheck-interval-seconds: '15'
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+  type: ClusterIP
+  selector:
+    app: cricket
