@@ -1,0 +1,360 @@
+git password :- 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
+
+----------------Chitra or pradeep maurya release:---------------------
+
+scdjv-pace.teknobuilt.com -> EC2 instance ireland
+ssh ec2-user@34.251.38.8
+password: support@567#8
+
+jwil-pace.teknobuilt.com -> EC2 instance ireland
+ssh ec2-user@34.251.38.8
+password: support@567#8
+
+ntpc-pace.teknobuilt.com -> EC2 instance Mumbai
+ssh -i paceos-ntpc.pem ec2-user@3.108.241.204
+
+nayara-pace.teknobuilt.com
+ssh -i paceos-ntpc.pem ec2-user@3.108.241.204
+
+acgc-pace.teknobuilt.com
+ssh -i paceos-ntpc.pem ec2-user@3.108.241.204
+
+company-pace.teknobuilt.com -> on EC2 instance -> Mumbai region
+ssh -i demo-pace-ec2.pem ec2-user@35.154.239.218
+
+rk-pace.teknobuilt.com -> EC2 Instance -> US region
+ssh -i pace-riddell-kurczaba-keypair.pem ec2-user@34.231.71.99
+
+cczjv-pace.teknobuilt.com -> EC2 Instance -> US region
+ssh -i pace-riddell-kurczaba-keypair.pem ec2-user@34.231.71.99
+
+cpuc-pace.teknobuilt.com -> EC2 Instance -> US region
+ssh -i pace-riddell-kurczaba-keypair.pem ec2-user@34.231.71.99
+
+os2-pace.teknobuilt.com -> EC2 Instance -> US region
+ssh -i pace-riddell-kurczaba-keypair.pem ec2-user@34.231.71.99
+
+networkrail-pace.teknobuilt.com -> EC2 Instance -> Ireland (EU-WEST-1)
+ssh -i Networkrail-pem2.pem ec2-user@63.32.110.77
+
+-----------------------Git command:----------------------
+
+git branch (Branch should be master)
+
+git pull
+
+user_ID:- umbrellainfo
+
+git Token :- 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
+
+Gut Password:--> Asdf@89@123
+
+github:--
+username:-gudduray90
+password:Terraform@2023
+Token:- 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
+-----------------------clear cache:----------------------
+
+rm -rf /paceapp/companyname-pace.teknobuilt.com/file/cache/*   ---> Clear cache from all application
+
+Below command need to be run on any server and need to run just one time:-->
+
+git tag tag-number
+
+git push origin tag-numbe
+
+--------------------------------Data Interface or sftp prod deployment-----------------------------------
+
+Execute SQL queries on SCDJV prod db only and run master-sftp pipeline in eu-west-1 ireland.
+
+----------------------------------------------------------------------------------------------------------
+
+
+ssh -i iac-terraform.pem ec2-user@43.205.209.56
+
+aws eks update-kubeconfig --region region-code --name my-cluster
+
+aws eks update-kubeconfig --name pace20-devQA-in --region ap-south-1
+
+
+----------------------------------VPN------------------------------------------------------------------
+
+openvpn.teknobuilt.com:943
+
+user - teknoadminvpn
+password:--> teknovpn123
+
+----------------------------------------------- ZOOM URL --------------------------------------------
+
+https://zoom.us/j/7977171171
+
+----------------------------------------------Prod database -------------------------------------------
+
+-- production databases
+mysql -h paceos-ntpc.cmeqe5ehdlt1.ap-south-1.rds.amazonaws.com -u ntpc_paceOS -p ntpc_paceOS --ssl-mode=DISABLED -A
+OmoZlA7qHGQsscfSS
+
+mysql -h paceos-deployments.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u gmc_live -p gmc_live --ssl-mode=DISABLED -A
+W*}G0JDK9CF*
+
+mysql -h pace-scdjv-db.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u nlngt7_usrlive -p nlngt7_dblive --ssl-mode=DISABLED -A
+mi!an#20
+
+mysql -h paceos-deployments.cmeqe5ehdlt1.ap-south-1.rds.amazonaws.com -u admin -p company_paceapp --ssl-mode=DISABLED -A
+OmoZlA7fLqHGQsedscfSS
+
+mysql -h paceos-deployments.cmeqe5ehdlt1.ap-south-1.rds.amazonaws.com -u dev_pacehse -p dev_pacehse --ssl-mode=DISABLED -A
+9QLqHGSxcdscfSSxddfg
+
+mysql -h pace-jwil-db.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u admin -p jwil --ssl-mode=DISABLED -A
+gw*{H9JK8JF*
+
+mysql -h pace-mhg-db.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u admin -p mhg --ssl-mode=DISABLED -A
+uufQiV643hnueOziHmNO
+
+
+-------------------------------------------------------Eks Cluster details ----------------------------------
+
+aws eks update-kubeconfig --name pace20-prod-in --region ap-south-1
+kubectl config use-context arn:aws:eks:ap-south-1:176023829637:cluster/pace20-prod-in
+
+aws eks update-kubeconfig --name paceapp-staging --region ap-south-1
+kubectl config use-context arn:aws:eks:ap-south-1:176023829637:cluster/paceapp-staging
+
+aws eks update-kubeconfig --name pace20-devQA-in --region ap-south-1
+kubectl config use-context arn:aws:eks:ap-south-1:176023829637:cluster/pace20-devQA-in
+
+aws eks update-kubeconfig --name ssoProd --region eu-west-1
+kubectl config use-context arn:aws:eks:eu-west-1:176023829637:cluster/ssoProd
+
+aws eks update-kubeconfig --name paceos-eks-ireland --region eu-west-1
+kubectl config use-context arn:aws:eks:eu-west-1:176023829637:cluster/paceos-eks-ireland
+
+aws eks update-kubeconfig --name pace20-prod --region us-east-1
+kubectl config use-context arn:aws:eks:us-east-1:176023829637:cluster/pace20-prod
+
+
+kubectl -n development logs  -l app=sso-backend -c sso-backend -f
+
+kubectl -n production logs  -l app=datainterfacing -c datainterfacing -f
+
+NodePort:--	##  Listens for external request on all worker nodes
+Port:--		##  Internal cluster service port for container and listens for incoming request from the nodeport and forwards to targetPort
+TargetPort:-- 	##  This is the actual port on which your application is running inside the container
+
+kubectl scale deployment/ct-backend --replicas=1 -n development
+
+----------------------------------------------------------  Copy local file on EC2 instance ---------------------------------------
+
+scp -i demo-pace-ec2.pem *.cer *.key ec2-user@35.154.239.218:/tmp/
+
+
+------------------------------------------------- Create user in mysql ----------------------------------------------------------------
+
+create user 'USer_name'@'%' IDENTIFIED BY 'Password';
+
+GRANT SELECT,EXECUTE, LOCK TABLES ON db_name.* TO 'USer_name'@'%' ;
+
+Select user from mysql.user;  
+
+GRANT ALL PRIVILEGES ON pacedemo_dblive. * TO 'pacedemo_admin'@'%';
+
+GRANT ALL PRIVILEGES ON database_name. * TO 'user_name'@'%';
+
+GRANT TRIGGER ON <mahara_db_name>. * TO '<mahara_db_user>'@'localhost';
+
+mysqldump -f -h pace-riddell-db.cst6fbronkql.us-east-1.rds.amazonaws.com -u admindb --events --triggers --routines -p --skip-add-locks --single-transaction cpuc_admin > cpuc_dblive.sql
+
+
+mysql -h pace-scdjv-db.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u admindb -p
+
+create database scdjv_live_replica_20230328;
+
+create user 'scdjv-stage-replica'@'%' IDENTIFIED BY 'scdjv@2023!';
+
+GRANT SELECT,EXECUTE, LOCK TABLES ON scdjv_live_replica_20230328.* TO 'scdjv-stage-replica'@'%';
+
+mysqldump -f -h pace10-devqa-database.cmeqe5ehdlt1.ap-south-1.rds.amazonaws.com -u admin --events --triggers --routines -p --skip-add-locks --single-transaction nlng_stage > nlng_stage_dump.sql
+
+-------------------------------------------------Create user in PostreSQL------------------------------------------------------------
+CREATE USER stg_sso_readonly WITH ENCRYPTED PASSWORD 'QSCefb@#$678';
+GRANT USAGE ON SCHEMA public TO stg_sso_readonly;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO stg_sso_readonly;
+GRANT USAGE ON SCHEMA public TO stg_sso_readonly;
+
+CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+GRANT USAGE ON SCHEMA public TO Read_Only_User;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO Read_Only_User;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO Read_Only_User;
+REVOKE CREATE ON SCHEMA public FROM PUBLIC;
+GRANT CONNECT ON DATABASE YourDatabaseName TO Read_Only_User;
+
+CREATE USER dev_italk_rw WITH ENCRYPTED PASSWORD 'devitalkrw@2023';
+GRANT ALL PRIVILEGES ON DATABASE development_italk_1 to dev_italk_rw;
+
+----------------------------- New Task --------------------------
+
+mysql -h localhost -u TeknobuiltUser -pFastPaceOS40
+
+mysqldump -f -h localhost -u TeknobuiltUser --events --triggers --routines -pFastPaceOS40 --skip-add-locks --single-transaction --no-tablespaces Teknobuilt_WPDB_stage > Teknobuilt_WPDB_stage.sql
+
+
+mysqldump -u debian-sys-maint -p Teknobuilt_WPDB > Teknobuilt_WPDB.sql
+
+user     = debian-sys-maint
+password = RdLXSpQk71fX5izM
+
+db name:- Teknobuilt_WPDB_NEW
+user name: TeknobuiltAdmin
+password:- Admin@2023!#
+
+create user 'TeknobuiltAdmin'@'%' IDENTIFIED BY 'Admin@2023!#';
+GRANT ALL PRIVILEGES ON Teknobuilt_WPDB_NEW. * TO 'TeknobuiltAdmin'@'%';
+FLUSH PRIVILEGES;
+
+mentic BT
+Moodel
+Teknobuilt wordpress
+
+Environment should be same
+and PHP Version
+
+----------------------------- Moodel DB username and password ----------------------------
+Region- eu-west-1
+EC2 Instance ID- i-07bb54252ddb23c68
+EC2 Public IP- 54.216.251.222
+mysql root user password- not set any password for root user
+Moodel mysql username- moodleadmin
+Moodel mysql username- Moodleadmin@!#2023@
+
+create user 'moodleadmin'@'localhost' IDENTIFIED BY 'Moodleadmin@!#2023@';
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON moodle.* TO 'moodleadmin'@'localhost';
+
+-----------------------------Mentis DB username and password --------------------------------
+Region- eu-west-1
+EC2 Instance ID- i-07bb54252ddb23c68
+EC2 Public IP- 54.216.251.222
+mysql root user password- not set any password for root user
+
+CREATE USER 'mantisbtadmin'@'localhost' IDENTIFIED BY 'Mantisbtadmin@2023!@#';
+
+CREATE DATABASE mantisbtadmindb;
+
+GRANT ALL PRIVILEGES ON mantisbtadmindb.* TO 'mantisbtadmin'@'localhost';
+
+FLUSH PRIVILEGES;
+
+mysql -u mantisbtadmin -p
+
+
+MYSQL root user password----> Mysqlroot@2023
+
+---------------------------------------- DataInterface (www.teknobuilt.com) wordpress ------------------
+
+mysql -u root -p
+
+MYSQL root user password----> Mysqlroot@2023
+
+CREATE DATABASE www_teknobuilt_com; 
+
+create user 'Teknobuiltadmindb'@'%' IDENTIFIED BY 'Admin!#2023$!';
+
+GRANT SELECT,EXECUTE, LOCK TABLES ON www_teknobuilt_com.* TO 'Teknobuiltadmindb'@'%' ;
+
+GRANT ALL PRIVILEGES ON www_teknobuilt_com.* TO 'Teknobuiltadmindb'@'%';
+
+CREATE DATABASE SecondDatabase;
+
+create user 'SecondUser'@'localhost' IDENTIFIED BY 'SecondPassword@123';
+
+SET PASSWORD FOR FirstUser@localhost= PASSWORD("FirstPassword"); SET PASSWORD FOR SecondUser@localhost= PASSWORD("SecondPassword");
+
+GRANT ALL PRIVILEGES ON SecondDatabase.* TO SecondUser@localhost;
+
+FLUSH PRIVILEGES;
+
+Teknobuilt.com user name:- masteruser
+Teknobuilt.com password:- Masteruser@2023!#$
+
+RDS Host:-pace-jwil-db-new.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com
+user name:- Teknobuiltadmindb
+passwd:- Admin!#2023$!
+Database name:- www_teknobuilt_com
+New DB for www_teknobuilt_com domain:- prod_www_teknobuilt_com;
+
+create user 'Teknobuiltrwuser'@'%' IDENTIFIED BY 'RWuser@202304$!';
+GRANT ALL PRIVILEGES ON www_teknobuilt_com.* TO 'Teknobuiltrwuser'@'%';
+
+nslookup www.teknobuilt.com
+Non-authoritative answer:
+Name:	www.teknobuilt.com
+Address: 34.241.94.61
+
+----------------------------------CRM Laravel application DB -------------------------------
+create database prod_fincrm_db;
+
+create user 'crmadmin'@'%' IDENTIFIED BY 'crm@$2023!@#';
+
+GRANT ALL PRIVILEGES ON prod_fincrm_db.* TO 'crmadminuser'@'%';
+
+DB_CONNECTION=mysql
+DB_HOST=pace-jwil-db-new.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com
+DB_PORT=3306
+DB_DATABASE=prod_fincrm_db
+DB_USERNAME=crmadmin
+DB_PASSWORD=crm@$2023!@#
+
+ALTER USER 'crmadmin'@'%' IDENTIFIED BY 'Crmadmin@2023!'
+
+S3 bucket name:-> crm.teknobuilt.com
+region:- eu-west-1
+
+Route::get('/', 'Inertia\InertiaHomeController@index')->middleware('visits')->name('homepage');
+
+admin@info.com
+P@$$word!
+demo@digitalcrm.com
+password
+
+mysqldump -f -h pace-jwil-db-new.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u crmadmin --events --triggers --routines -p --skip-add-locks --single-transaction --no-tablespaces prod_fincrm_db > /tmp/prod_fincrm_db.sql
+
+mysqldump -f -h pace-jwil-db-new.ctvtv1zqexjg.eu-west-1.rds.amazonaws.com -u crmadmin --events --triggers --routines -p --skip-add-locks --single-transaction prod_fincrm_db > /tmp/prod_fincrm_db.sql
+
+-----------------------------------------
+
+cat default-access_log | awk '{print $9}' | grep  40 | wc -l
+
+cat default-access_log | awk '{print $7,$9}' | grep -v 200 | less
+
+---------------------------Start 3D on i-01f84169d85011ecc EC2 instance--------------
+Server IP:- 18.203.42.102
+Region :- EU-WEST-1 (IRELAND)
+
+location:- /paceapp/online_viewer
+Application start command :- forever start -o out.log -e err.log start.js
+
+------------------------------------Athena Query ------------------------------------
+
+CREATE EXTERNAL TABLE IF NOT EXISTS cloudfront_logs (
+    `Date` Date,
+    Time STRING,
+    Location STRING,
+    Bytes INT,
+    RequestIP STRING,
+    Method STRING,
+    Host STRING,
+    Uri STRING,
+    Status INT,
+    Referrer STRING,
+    OS String,
+    Browser String,
+    BrowserVersion String
+) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
+WITH SERDEPROPERTIES (
+"input.regex" = "^(?!#)([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+[^\(]+[\(]([^\;]+).*\%20([^\/]+)[\/](.*)$"
+) LOCATION 's3://salespanda-gitlab-s3/cdn_logs/';
+
+
+
+SELECT * FROM "default"."cloudfront_logs" limit 10;
